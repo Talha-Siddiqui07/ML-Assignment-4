@@ -20,3 +20,11 @@ st.header("Want to Know if He/She will buy it for you?")
 age = st.number_input("Enter his/her Age: ")
 salary = st.number_input("Enter his/her Salary: ")
 gender = st.number_input("Enter gender(0 for Female, 1 for Male): ")
+
+if st.button("Predict"):
+    prediction = predict_purchase(age, salary, gender)
+    if prediction == 0:
+        st.write("They will not Buy the thing.")
+    else:
+        st.write("They will Buy it for you.")
+        
